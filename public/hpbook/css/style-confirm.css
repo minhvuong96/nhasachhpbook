@@ -1,0 +1,78 @@
+.wrapperConfirmed{
+	padding: 20px;
+	height: 100%;
+}
+#titleConfirmed{
+	color: blue;
+	font-size: 2em;
+	font-weight: 500;
+	margin-top: 20px;
+}
+#line1{
+	font-size: 1em;
+	color: #333;
+}
+#line2{
+	font-size: 1.3em;
+	margin-top: 10px;
+	color: #333;
+
+}
+#line2 a{
+	text-decoration: none;
+	color: #1eb0e0;
+	margin-left: 10px;
+	transition: 0.4s;
+}
+#line2 a:hover{
+	color: blue;
+}
+#line3{
+	font-size: 1em;
+	color: #443131;
+}
+#line3 a{
+	text-decoration: none;
+	color: #1eb0e0;
+	margin-left: 10px;
+	transition: 0.4s;
+}
+#line3 a:hover{
+	color: blue;
+}
+#line4{
+	font-size: 0.9em;
+	color: #443131;
+}
+#line5{
+	font-size: 0.9em;
+	color: #443131;
+	width: 300px;
+	margin: 0 auto;
+}
+#detailOrderConfirmed{
+	margin-top: 30px;
+	text-align: left;
+	margin:30px auto 30px auto;
+	width: 300px;
+	padding: 20px;
+	font-size: 1em;
+	color: #333;
+}
+#detailOrderConfirmed br{
+
+}
+#titleDetailOrderConfirmed{
+	font-size: 1.2em;
+	font-weight: 500;
+	margin-bottom: 10px;
+
+}
+.amount{
+	font-size: 0.8em;
+	color: #443131;
+	margin-top: 10px;
+}
+.amountTotal{
+	font-size: 1em;
+}

@@ -1,0 +1,64 @@
+.wrapper{
+    background-color: white;
+    padding: 20px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.wrapper div h4{
+    font-size: 1em;
+    color: #333;
+}
+.wrapper div h4 a{
+    text-decoration: none;
+    color:blue;
+}
+.timeOrder{
+    color: gray;
+    font-size: 0.9em;
+}
+.total{
+    color: #333;
+    font-size: 1.2em;
+}
+.timeStatus{
+    color: #333;
+    font-size: 1em;
+}
+.wrapper-process{
+    margin: 15px;
+    padding: 10px;
+    background-color: #e4e3e3;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+a.cancelOrder{
+    text-decoration: none;
+    font-size: 1em;
+}
+.productOrder a img{
+    height: 50px;
+}
+.productName{
+    font-size: 0.9em;
+    color: #333;
+}
+.quantity{
+    color: gray;
+    font-size: 0.9em;
+}
+.quantity b{
+    color: black
+}
+.addressBlock{
+    color: #333;
+    font-size: 0.9em;
+}
+.addressBlock h4{
+    color: #333;
+    font-size: 1.2em;
+}
+.amount_total{
+    font-weight: 600;
+    font-size: 1em;
+}

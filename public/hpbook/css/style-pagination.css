@@ -1,0 +1,12 @@
+/*.pagination{
+}
+.pagination li{
+	border: 1px solid black;
+	padding: 5px;
+}
+.pagination li a{
+	text-decoration: none;
+}
+.pagination li a:active{
+	color: red;
+}*/

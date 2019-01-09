@@ -1,0 +1,117 @@
+
+.content-info{
+	font-size: 0.9em;
+	color: gray;
+	background-color: white;
+	border:1px solid #e6e6e6;
+	height: auto;
+	padding: 20px;
+}
+.content-info div input{
+	font-size: 1em;
+}
+.selectMethod{
+	background-color: white;
+	border:1px solid #e6e6e6;
+	height: auto;
+	padding: 20px;
+	font-size: 0.9em;
+}
+.shipping-method h4,.payment-method h4,.infoUser h4,.checkOrder h4{
+	font-size: 1em;
+	color: white;
+	font-weight: 700;
+ 	padding: 10px 10px 10px 20px;
+  	box-sizing: border-box;
+	 background: #028090;
+	margin-bottom: 0;	
+}
+.myRadio{
+	margin-top: 20px;
+}
+.myRadio:first-child{
+	margin-top: 0px;
+}
+.content-check{
+	background-color: white;
+	border:1px solid #e6e6e6;
+	height: auto;
+	padding: 0px 20px 20px 20px;
+	font-size: 0.9em;
+}
+.content-check div table{
+	font-size: 0.9em;
+	text-align: left;
+}
+#code{
+	font-size: 0.9em;
+}
+.discountCode a{
+	font-size: 0.9em;
+	text-transform: uppercase;
+	background: linear-gradient(to top, #5d6dc3, #3c86d8);
+}
+#labelSummaryTotal{
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+.summaryTotal{
+	font-size: 1.3em;
+	font-weight: 600;
+}
+#returnCart{
+	text-decoration: none;
+}
+#returnCart:hover{
+	color: gray;
+}
+#btnOrder{
+	font-size: 1.2em;
+	text-transform: uppercase;
+	
+}
+.cart h2{
+	color: blue;
+	font-size: 1.2em;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+table {
+	border-collapse:collapse;
+	font-size: 1em;
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;
+	font-size: 0.9em;
+	overflow: scroll;
+}
+th,td{
+	border: 1px solid lightgray;
+	padding: 10px;
+}
+td span{
+	font-size: 1em;
+	font-weight: 400;
+	color: gray;
+}
+td a{
+	text-decoration: none!important;
+	color: #666;
+	font-weight: 600;
+}
+td a i{
+	color: #c00;
+	font-size: 1.2em;
+	transform: 0.4s
+}
+td a i:hover{
+	color: #666;
+}
+td a img{
+	width: 80px;
+	height: 100px;
+	transition: 0.5s;
+}
+td a img:hover{
+	transform: scale(1.1);
+}

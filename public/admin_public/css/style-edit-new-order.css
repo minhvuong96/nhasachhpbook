@@ -1,0 +1,31 @@
+.wrapper{
+    background-color:#fbfbfb;
+    padding: 20px;
+    color: #333;
+    font-size: 1em;
+}
+.title{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.timeOrder{
+    font-size: 0.9em;
+}
+.oneProduct img{
+    height: 50px;
+}
+input{
+    border: none;
+    width: 50px;
+    border:1px solid lightseagreen;
+    border-radius: 3px;
+}
+input#amount_shipping{
+   width: 100px;;
+}
+input#amount_discount{
+    width: 100px;;
+ }
+ label{
+     width: 147px;
+ }

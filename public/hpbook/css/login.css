@@ -1,0 +1,50 @@
+.login #titleLogin{
+	font-size: 1.1em;
+	color: white;
+	font-weight: 700;
+ 	padding: 10px 10px 10px 20px;
+  	box-sizing: border-box;
+ 	background: #028090;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+.login form{
+	font-size: 0.9em;
+	color: gray;
+	background-color: white;
+	border:1px solid #e6e6e6;
+	height: auto;
+	padding: 20px;
+}
+.login form label{
+	text-transform: uppercase;
+	font-size: 0.9em;
+	font-weight: 600;
+}
+.login form input{
+	font-size: 0.9em;
+}
+#btn-login{
+	text-transform: uppercase;
+	font-size: 1em;
+	
+}
+#forgot-password{
+	text-decoration: none;
+}
+.login form h4{
+	margin-top: 20px;
+	font-size: 1em;
+}
+.login form h4 a{
+	text-decoration: none;
+}
+.login form div div{
+	font-size: 2em;
+}
+#connectFb{
+	margin-right: 10px;
+}
+#connectGg{
+	color: #d34836;
+}

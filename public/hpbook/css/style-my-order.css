@@ -1,0 +1,59 @@
+.oneOrder{
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+.oneOrder:first-child{
+    margin-top: 0;
+}
+.topOrder div h4{
+    font-size: 1em;
+    color: #333;
+}
+.topOrder div h4 a{
+    text-decoration: none;
+    color:blue;
+}
+.topOrder div div{
+    color: darkgray;
+    font-size: 0.9em;
+}
+a.manageOrder{
+    text-decoration: none;
+    font-size: 1em;
+}
+.topOrder{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+}
+.contentOrder{
+    padding-top: 20px;
+}
+.productOrder a img{
+    height: 50px;
+}
+.productName{
+    font-size: 0.9em;
+    color: #333;
+}
+.quantity{
+    color: gray;
+    font-size: 0.9em;
+}
+.quantity b{
+    color: black
+}
+.statusOrder{
+    color: #333;
+    font-size: 0.8em;
+    border-radius: 10px;
+}
+.time{
+    font-size: 0.85em;
+    color: #333;
+}
+.productStatus a{
+    text-decoration: none;
+    font-size: 0.9em;
+    color: #800202;
+}

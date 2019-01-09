@@ -1,0 +1,26 @@
+.wrapper{
+    background-color: white;
+    padding: 20px;
+}
+.title{
+    font-size: 1.5em;
+    color: blue;
+}
+.productOrder a img{
+    height: 50px;
+}
+.productName{
+    font-size: 1em;
+    color: #333;
+}
+.priceUnit{
+    font-size: 1em;
+    color: #333;
+}
+.quantity{
+    font-size: 1em;
+    color: gray;
+}
+.confirmCan{
+    font-size: 1.3em;
+}

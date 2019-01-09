@@ -1,0 +1,30 @@
+.changePass #titlechangePass{
+	font-size: 1.1em;
+	color: white;
+	font-weight: 700;
+ 	padding: 10px 10px 10px 20px;
+  	box-sizing: border-box;
+	 background: #028090;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+.changePass form{
+	font-size: 0.9em;
+	color: gray;
+	background-color: white;
+	border:1px solid #e6e6e6;
+	height: auto;
+	padding: 20px;
+}
+.changePass form label{
+	text-transform: uppercase;
+	font-size: 0.9em;
+	font-weight: 600;
+}
+.changePass form input{
+	font-size: 0.9em;
+}
+#btnChange{
+	text-transform: uppercase;
+	font-size: 1em;
+}

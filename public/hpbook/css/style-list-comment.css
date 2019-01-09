@@ -1,0 +1,33 @@
+.myComment{
+	background-color: white;
+	height: 100%;
+	width: 100%;
+	padding: 15px;
+}
+.titleMyComment{
+	color: blue;
+	font-size: 1.2em;
+	font-weight: 500;
+}
+.dateComent{
+	color: gray;
+	font-size: 0.8em;
+}
+.bookComment a{
+	text-decoration: none;
+	color: #333;
+	font-size: 0.9em;
+}
+.scoreComment img{
+	height: 20px;
+}
+.contentComment{
+	color: gray;
+	font-size: 0.9em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.viewDetailComment{
+	font-size: 0.8em;
+}

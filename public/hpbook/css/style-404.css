@@ -1,0 +1,21 @@
+body{
+	background-color: white!important;
+}
+i{
+	 margin-top: 100px;
+	font-size: 10em;
+}
+h3{
+    color: blue;
+    font-size: 2.5em;
+	margin-top: 30px;
+}
+ h4{
+    color: #333;
+    font-size: 1.5em;
+}
+ a{
+    text-decoration: none;
+    color: blue;
+    font-size: 1em;
+}

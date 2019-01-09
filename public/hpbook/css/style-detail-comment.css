@@ -1,0 +1,44 @@
+.detailComment{
+	background-color: white;
+	padding: 20px;
+	height: 100%;
+}
+#titleDetailComment{
+	color: blue;
+	font-size: 1.2em;
+	font-weight: 500;
+}
+.imageDetailComment{
+	height: 100px;
+	float: left;
+}
+a.nameProductDetailComment{
+	text-decoration: none;
+	color: #333;
+	font-size: 0.9em;
+}
+a.nameProductDetailComment:hover{
+	color: blue;
+}
+.scoreDetailComment img{
+	height: 25px;
+}
+.dateDetailComment{
+	font-size: 0.9em;
+	color: gray;
+}
+td div{
+	padding: 5px;
+}
+th,td{
+	padding: 7px;
+}
+#content{
+	padding: 10px;
+	font-size: 0.9em;
+	color: #333;
+	display: block;
+}
+#saveComment{
+
+}

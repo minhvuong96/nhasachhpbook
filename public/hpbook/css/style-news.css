@@ -1,0 +1,14 @@
+.wrapper{
+    background: white;
+    padding: 20px;
+}
+.title{
+    font-size: 1.3em;
+    font-weight: 600;
+    color: blue;
+}
+.contentNews{
+    font-size: 1em;
+    color: #333;
+    line-height: 35px;
+}
