@@ -19,7 +19,7 @@
                         <ol class="breadcrumb float-left">
                             <li class="breadcrumb-item"><a href="{!!url('/admin/index')!!}">Trang Chủ</a></li>
                             <li class="breadcrumb-item active">Đơn Hàng Trả Trước</li>
-                            <li class="breadcrumb-item active">Đơn Hàng Mới</li>
+                            <li class="breadcrumb-item active">Đơn Hàng Đã Tiếp Nhận</li>
                         </ol>
 
                         <div class="clearfix"></div>
@@ -77,16 +77,10 @@
                                     </td>
                                     <td>
                                                 <span class="action">
-                                                    @if($item->admin_id == "")
+
                                                         <a class="iconViewCate btn btn-success"
-                                                           href="{!!url('/admin/approval-order',$item->id)!!}">Tiếp Nhận</a>
-                                                    @elseif($item->admin_id == Auth::user()->id)
-                                                        <a class="iconViewCate btn btn-warning"
-                                                           href="{!!url('/admin/approval-order',$item->id)!!}">Chờ xử lý</a>
-                                                    @else
-                                                        <a class="iconViewCate btn btn-secondary"
-                                                           href="javascript:void(0)">Đã được tiếp nhận</a>
-                                                    @endif
+                                                           href="{!!url('/admin/approval-order',$item->id)!!}">Chi Tiết</a>
+
                                                 </span>
                                     </td>
                                 </tr>

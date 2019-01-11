@@ -133,13 +133,21 @@ Route::group(['middleware'=>'checkAdmin'],function(){
 	Route::get('/admin/approval-comment',['uses'=>'CommentController@approvalComment']);
 	//Đơn hàng mới của đơn hàng trả trước
 	Route::get('/admin/new-order',['uses'=>'TransactionController@newOrder']);
+	//Đơn hàng đã tiếp nhận của đơn hàng trả trước
+    Route::get('/admin/received-order',['uses'=>'TransactionController@orderReceived']);
+    //Đơn hàng đang được vận chuyển của đơn hàng trả sau
+    Route::get('/admin/delivered-order',['uses'=>'TransactionController@orderDelivered']);
 	//Danh sách đơn hàng trả trước
 	Route::get('/admin/view-order',['uses'=>'TransactionController@viewOrder']);
 	//Duyệt đơn hàng mới
 	Route::get('/admin/approval-order/{id}',['uses'=>'TransactionController@approvalOrder']);
 	//Đơn hàng mới của đơn hàng trả sau
 	Route::get('/admin/new-order-cod',['uses'=>'TransactionController@newOrderCOD']);
-	//Danh sách đơn hàng trả sau
+    //Đơn hàng đã tiếp nhận của đơn hàng trả sau
+    Route::get('/admin/received-order-cod',['uses'=>'TransactionController@orderReceivedCOD']);
+    //Đơn hàng đang được vận chuyển của đơn hàng trả sau
+    Route::get('/admin/delivered-order-cod',['uses'=>'TransactionController@orderDeliveredCOD']);
+	//Danh sách đơn hàng trả sau đã giao
 	Route::get('/admin/view-order-cod',['uses'=>'TransactionController@viewOrderCOD']);
 
 	//Đơn hàng bị hủy

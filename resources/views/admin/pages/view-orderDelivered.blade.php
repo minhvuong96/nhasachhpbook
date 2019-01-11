@@ -19,7 +19,7 @@
                         <ol class="breadcrumb float-left">
                             <li class="breadcrumb-item"><a href="{!!url('/admin/index')!!}">Trang Chủ</a></li>
                             <li class="breadcrumb-item active">Đơn Hàng Trả Trước</li>
-                            <li class="breadcrumb-item active">Đơn Hàng Mới</li>
+                            <li class="breadcrumb-item active">Đơn Hàng Đang Vận Chuyển</li>
                         </ol>
 
                         <div class="clearfix"></div>
@@ -44,7 +44,6 @@
                                 <th>Ngày Đặt Hàng</th>
                                 <th>Tổng Tiền</th>
                                 <th>Hình Thức Thanh Toán</th>
-                                <th>Thanh Toán</th>
                                 <th></th>
                             </tr>
                             </thead>
@@ -69,24 +68,9 @@
                                         @endif
                                     </td>
                                     <td>
-                                        @if($item->pay_status==1)
-                                            Đã thanh toán
-                                        @else
-                                            Chưa thanh toán
-                                        @endif
-                                    </td>
-                                    <td>
                                                 <span class="action">
-                                                    @if($item->admin_id == "")
                                                         <a class="iconViewCate btn btn-success"
-                                                           href="{!!url('/admin/approval-order',$item->id)!!}">Tiếp Nhận</a>
-                                                    @elseif($item->admin_id == Auth::user()->id)
-                                                        <a class="iconViewCate btn btn-warning"
-                                                           href="{!!url('/admin/approval-order',$item->id)!!}">Chờ xử lý</a>
-                                                    @else
-                                                        <a class="iconViewCate btn btn-secondary"
-                                                           href="javascript:void(0)">Đã được tiếp nhận</a>
-                                                    @endif
+                                                           href="{!!url('/admin/approval-order',$item->id)!!}">Chi Tiết</a>
                                                 </span>
                                     </td>
                                 </tr>

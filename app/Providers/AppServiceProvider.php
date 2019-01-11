@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use App\Comment;
 use App\Product;
 use App\Transaction;
+use Auth;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -15,13 +16,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //count bình luận mới
         $countNewComment = Comment::where('status',0)->count();
+        //count đầu sách hết hàng
         $countOutOfStock = Product::where('quantity','=',0)->count();
+        //count đơn hàng mới trả trước
         $countNewOrder = Transaction::where([
             ['status', '=', '1'],
             ['payment', '<>', '3']
         ])->count();
+        //count đơn hàng mới COD
         $countNewOrderCOD = Transaction::where([
             ['status', '=', '1'],
             ['payment', '=', '3']
