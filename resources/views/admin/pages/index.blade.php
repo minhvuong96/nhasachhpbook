@@ -62,65 +62,65 @@ Trang Chủ - HPBOOK ADMIN
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                                <div class="col-12">
-                                    <div class="card-box table-responsive">
-                                       
-                                        <h4 class="m-t-0 header-title mb-4"><b>Thống kê chi tiết</b></h4>
-                                        <p class="font-14">
-                                                Tính đến ngày @php
-                                                $date = date("d/m/Y",strtotime($nowString));
-                                                echo $date;
-                                            @endphp
-                                            </p>
-                                        <table id="datatable" class="table table-bordered">
-                                            <thead>
-                                            <tr>
-                                                <th>STT</th>
-                                                <th>Tên Sách</th>
-                                                <th>Số Lượng Bán Ra</th>
-                                                <th>Giá</th>
-                                                <th>Thành Tiền</th>
-                                                <th>Ngày</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            @php
-                                                $i=0;
-                                            @endphp
+                        {{--<div class="row">--}}
+                                {{--<div class="col-12">--}}
+                                    {{--<div class="card-box table-responsive">--}}
+                                       {{----}}
+                                        {{--<h4 class="m-t-0 header-title mb-4"><b>Thống kê chi tiết</b></h4>--}}
+                                        {{--<p class="font-14">--}}
+                                                {{--Tính đến ngày @php--}}
+                                                {{--$date = date("d/m/Y",strtotime($nowString));--}}
+                                                {{--echo $date;--}}
+                                            {{--@endphp--}}
+                                            {{--</p>--}}
+                                        {{--<table id="datatable" class="table table-bordered">--}}
+                                            {{--<thead>--}}
+                                            {{--<tr>--}}
+                                                {{--<th>STT</th>--}}
+                                                {{--<th>Tên Sách</th>--}}
+                                                {{--<th>Số Lượng Bán Ra</th>--}}
+                                                {{--<th>Giá</th>--}}
+                                                {{--<th>Thành Tiền</th>--}}
+                                                {{--<th>Ngày</th>--}}
+                                            {{--</tr>--}}
+                                            {{--</thead>--}}
+                                            {{--<tbody>--}}
+                                            {{--@php--}}
+                                                {{--$i=0;--}}
+                                            {{--@endphp--}}
 
-                                            @foreach($transaction as $value)
+                                            {{--@foreach($transaction as $value)--}}
 
-                                                @foreach($value->products as $product)
-                                                    @php
-                                                        $i=$i+1;
-                                                        $pro_tran = DB::table('product_transaction')->where([['product_id',$product->id],['transaction_id',$value->id]])->first();
-  
-                                                    @endphp
-                                                    <tr>
+                                                {{--@foreach($value->products as $product)--}}
+                                                    {{--@php--}}
+                                                        {{--$i=$i+1;--}}
+                                                        {{--$pro_tran = DB::table('product_transaction')->where([['product_id',$product->id],['transaction_id',$value->id]])->first();--}}
+  {{----}}
+                                                    {{--@endphp--}}
+                                                    {{--<tr>--}}
 
-                                                        <td>{!!$i!!}</td>
-             
-                                                        <td>{!!$product->name!!}</td>
-                     
-                                                        <td>{!!$pro_tran->quantity!!}</td>
-                           
-                                                        <td>{!!number_format($product->price-$product->price*$product->discount/100,0,',','.')!!} đ</td>
-                                   
-                                                        <td>{!!number_format($pro_tran->amount_total,0,',','.')!!} đ</td>
-                                        
-                                                        <td>@php
-                                                                $date = date("d/m/Y",strtotime($value->created_at));
-                                                                echo $date;
-                                                            @endphp</td>
-                                                    </tr>
-                                                @endforeach
-                                            @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div> <!-- end row -->
+                                                        {{--<td>{!!$i!!}</td>--}}
+             {{----}}
+                                                        {{--<td>{!!$product->name!!}</td>--}}
+                     {{----}}
+                                                        {{--<td>{!!$pro_tran->quantity!!}</td>--}}
+                           {{----}}
+                                                        {{--<td>{!!number_format($product->price-$product->price*$product->discount/100,0,',','.')!!} đ</td>--}}
+                                   {{----}}
+                                                        {{--<td>{!!number_format($pro_tran->amount_total,0,',','.')!!} đ</td>--}}
+                                        {{----}}
+                                                        {{--<td>@php--}}
+                                                                {{--$date = date("d/m/Y",strtotime($value->created_at));--}}
+                                                                {{--echo $date;--}}
+                                                            {{--@endphp</td>--}}
+                                                    {{--</tr>--}}
+                                                {{--@endforeach--}}
+                                            {{--@endforeach--}}
+                                            {{--</tbody>--}}
+                                        {{--</table>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div> <!-- end row -->--}}
 
 
                     </div> <!-- container -->

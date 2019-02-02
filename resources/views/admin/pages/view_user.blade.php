@@ -21,7 +21,6 @@ Danh Sách Thành Viên - HPBOOK ADMIN
                                         <li class="breadcrumb-item active">Thành Viên</li>
                                         <li class="breadcrumb-item active">Danh Sách Thành Viên</li>
                                     </ol>
-
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
@@ -31,10 +30,11 @@ Danh Sách Thành Viên - HPBOOK ADMIN
 
                         <div class="row">
                             <div class="col-12">
+
                                 <div class="card-box table-responsive">
                                     @include('admin.blocks.message')
                                     <h4 class="m-t-0 header-title mb-4"><b>Danh Sách Thành Viên</b></h4>
-                                   
+                                    <a href="{!!url('/admin/add-user')!!}" class="btn btn-success m-3"><i class="fas fa-plus"></i>  Thêm</a>
                                     <table id="datatable" class="table table-bordered">
                                         <thead>
 
@@ -74,14 +74,14 @@ Danh Sách Thành Viên - HPBOOK ADMIN
                                             @if(Auth::user()->id ==3)
                                             <td>
                                                 <span class="action">
-                                                    <a class="iconViewCate text-success" href="{!!url('/admin/edit-user', $item->id)!!}" data-toggle="tooltip" data-placement="top" title="Sửa thành viên"><i class="fas fa-edit"></i></i></a>                 
+                                                    <a class="iconViewCate text-success" href="{!!url('/admin/edit-user', $item->id)!!}" data-toggle="tooltip" data-placement="top" title="Sửa thành viên"><i class="fas fa-edit"></i></a>
                                                     <a onclick="return confirm('Bạn có chắc muốn xóa không?');" class="iconViewCate text-danger" href="{!!url('/admin/delete-user', $item->id)!!}" data-toggle="tooltip" data-placement="top" title="Xóa thành viên"><i class="fas fa-trash"></i></a>
                                                 </span>
                                             </td>
                                             @elseif( (Auth::user()->admin ==1) && (($item->admin !=1) || Auth::user()->id == $item->id ) )
                                                <td>
                                                     <span class="action">
-                                                        <a class="iconViewCate text-success" href="{!!url('/admin/edit-user', $item->id)!!}" data-toggle="tooltip" data-placement="top" title="Sửa thành viên"><i class="fas fa-edit"></i></i></a>                 
+                                                        <a class="iconViewCate text-success" href="{!!url('/admin/edit-user', $item->id)!!}" data-toggle="tooltip" data-placement="top" title="Sửa thành viên"><i class="fas fa-edit"></i></a>
                                                         <a onclick="return confirm('Bạn có chắc muốn xóa không?');" class="iconViewCate text-danger" href="{!!url('/admin/delete-user', $item->id)!!}" data-toggle="tooltip" data-placement="top" title="Xóa thành viên"><i class="fas fa-trash"></i></a>
                                                     </span>
                                                 </td>

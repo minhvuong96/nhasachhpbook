@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 use App\Comment;
 use App\Product;
 use App\Transaction;
@@ -16,6 +17,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Schema::defaultStringLength(191);
         //count bình luận mới
         $countNewComment = Comment::where('status',0)->count();
         //count đầu sách hết hàng

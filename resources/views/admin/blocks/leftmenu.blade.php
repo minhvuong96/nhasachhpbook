@@ -70,14 +70,14 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);"><i
-                                class="fas fa-book-open"></i><span> Quản Lý Kho </span>@if($countOutOfStock!=0)
+                                class="fas fa-book-open"></i><span> Quản Lý Sách </span>@if($countOutOfStock!=0)
                             <span class="badge badge-danger badge-pill noti-icon-badge">{!!$countOutOfStock!!}</span>
                         @endif
 
                         <span class="menu-arrow"></span></a>
                     <ul class="nav-second-level" aria-expanded="false">
                         <li><a href="{!!url('/admin/add-product')!!}">Thêm Sách</a></li>
-                        <li><a href="{!!url('/admin/view-products')!!}">Tồn Kho</a></li>
+                        <li><a href="{!!url('/admin/view-products')!!}">Sách Tồn</a></li>
                         <li><a href="{!!url('/admin/out-of-stock')!!}">Hết Hàng ({!!$countOutOfStock!!})</a></li>
 
                     </ul>
@@ -109,14 +109,6 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="javascript: void(0);"><i class="fas fa-users"></i><span> Thành Viên </span> <span
-                                class="menu-arrow"></span></a>
-                    <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href="{!!url('/admin/add-user')!!}">Thêm Thành Viên</a></li>
-                        <li><a href="{!!url('/admin/view-users')!!}">Danh Sách Thành Viên</a></li>
-                    </ul>
-                </li>
-                <li>
                     <a href="javascript: void(0);"><i class="fas fa-newspaper"></i><span> Bài Viết </span> <span
                                 class="menu-arrow"></span></a>
                     <ul class="nav-second-level" aria-expanded="false">
@@ -140,6 +132,15 @@
                     <ul class="nav-second-level" aria-expanded="false">
                         <li><a href="{!!url('/admin/add-coupon')!!}">Thêm Mã</a></li>
                         <li><a href="{!!url('/admin/view-coupon')!!}">Danh Sách Mã</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);"><i class="fas fa-users"></i><span> Phân Quyền </span> <span
+                                class="menu-arrow"></span></a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                        <li><a href="{!!url('/admin/view-users')!!}">Thành Viên</a></li>
+                        <li><a href="{!!url('/admin/view-roles')!!}">Chức Danh</a></li>
+                        <li><a href="{!!url('/admin/view-permissions')!!}">Quyền Hạn</a></li>
                     </ul>
                 </li>
 
