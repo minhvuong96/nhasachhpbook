@@ -48,7 +48,7 @@
 											<div class="col-6 col-lg-4 col-xl-3">
 										<div class="thumb-wrapper thumb-wrapper2">
 											<div class="img-box img-box-product">
-												<a href="{!!url('/chi-tiet',$item['alias'])!!}"><img class="img-product" src="admin_public/upload/products/{!!$item['image']!!}" class="img-responsive img-fluid" alt=""></a>
+											<a href="{!!url('/chi-tiet',$item['alias'])!!}"><img class="img-product" src="admin_public/upload/products/{!!$item['image']!!}" class="img-responsive img-fluid" alt="{{$item['image']}}"></a>
 											</div>
 											<div class="thumb-content">
 												<a href="{!!url('/chi-tiet',$item['alias'])!!}" data-toggle="tooltip" data-placement="right" title="{!!$item['image']!!}"><h4 class="text-capitalize">{!!$item['name']!!}</h4></a>
@@ -116,7 +116,7 @@
 								<!-- 1 sản phẩm -->
 								@foreach($saleProduct as $item)
 								<div class="one-item ">
-									<a class="float-left" href="{!!url('/chi-tiet',$item->alias)!!}"><img src="admin_public/upload/products/{!!$item->image!!}" alt=""></a>
+								<a class="float-left" href="{!!url('/chi-tiet',$item->alias)!!}"><img src="admin_public/upload/products/{!!$item->image!!}" alt="{{$item->image}}"></a>
 									<span class="name-one-item "><a href="{!!url('/chi-tiet',$item->alias)!!}">{!!$item->name!!}</a></span><br>
 									<span class="price-one-item">{!!number_format($item->price - $item->price*$item->discount/100,0,",",".")!!} đ</span>
 									<span class="discount-one-item"><strike>{!!number_format($item->price,0,",",".")!!} đ</strike></span>
@@ -135,7 +135,7 @@
 								<!-- 1 sản phẩm -->
 								@foreach($bestSellerProduct as $item)
 								<div class="one-item">
-									<a class="float-left" href="{!!url('/chi-tiet',$item->alias)!!}"><img src="admin_public/upload/products/{!!$item->image!!}" alt=""></a>
+								<a class="float-left" href="{!!url('/chi-tiet',$item->alias)!!}"><img src="admin_public/upload/products/{!!$item->image!!}" alt="{{$item->image}}"></a>
 									<span class="name-one-item "><a href="{!!url('/chi-tiet',$item->alias)!!}">{!!$item->name!!}</a></span><br>
 									<span class="price-one-item">{!!number_format($item->price - $item->price*$item->discount/100,0,",",".")!!} đ</span>
 									<span class="discount-one-item"><strike>{!!number_format($item->price,0,",",".")!!} đ</strike></span>

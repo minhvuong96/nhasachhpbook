@@ -31,7 +31,7 @@ Hóa Đơn Thanh Toán - HPBOOK
                                 <div class="card-box">
                                     <div class="clearfix">
                                         <div class="pull-left">
-                                            <img src="assets/images/logo_dark.png" alt="" height="20">
+                                            <img src="assets/images/logo_dark.png" alt="logo_dark.png" height="20">
                                         </div>
                                         <div class="pull-right">
                                             <h4 class="m-0 d-print-none">Hóa Đơn</h4>

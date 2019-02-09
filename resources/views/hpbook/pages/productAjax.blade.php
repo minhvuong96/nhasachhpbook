@@ -3,7 +3,7 @@
 	<div class="col-6 col-lg-4 col-xl-3">
 		<div class="thumb-wrapper thumb-wrapper2">
 			<div class="img-box img-box-product">
-				<a href="{!!url('/chi-tiet',$item['alias'])!!}"><img class="img-product" src="admin_public/upload/products/{!!$item['image']!!}" class="img-responsive img-fluid" alt=""></a>
+			<a href="{!!url('/chi-tiet',$item['alias'])!!}"><img class="img-product" src="admin_public/upload/products/{!!$item['image']!!}" class="img-responsive img-fluid" alt="{{$item['image']}}"></a>
 			</div>
 			<div class="thumb-content">
 				<a href="{!!url('/chi-tiet',$item['alias'])!!}" data-toggle="tooltip" data-placement="right" title="{!!$item['image']!!}"><h4 class="text-capitalize">{!!$item['name']!!}</h4></a>

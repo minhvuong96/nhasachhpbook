@@ -2,7 +2,7 @@
 		<div class="bg-dark wrapper-content-footer">
 			<div class="row">
 					<div class="col-sm-3 d-md-block d-none">
-						<a href=""><img class="bg-light logo-bot" src="hpbook/images/logo4.jpg" alt=""></a>
+					<a href=""><img class="bg-light logo-bot" src="hpbook/images/logo4.jpg" alt="logo4.jpg"></a>
 						<p>CÔNG TY TNHH TAMEHON. M.S.D.N: 0201771309. Địa chỉ : 3/11/5 An Trì 2, Phường Hùng Vương, Quận Hồng Bàng, Thành phố Hải Phòng, Việt Nam.</p>
 					</div>
 					<div class="col-md-3 col-sm-4">

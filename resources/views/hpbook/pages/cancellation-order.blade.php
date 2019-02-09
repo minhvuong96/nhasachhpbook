@@ -3,7 +3,7 @@
 Hủy Đơn Hàng - HPBOOK
 @endsection
 @section('css')
-		<!-- style page cart -->
+	<!-- style page cart -->
 	<link rel="stylesheet" href="hpbook/css/style-cancellation-order.css">
 @endsection
 @section('content')

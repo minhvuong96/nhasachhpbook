@@ -39,7 +39,7 @@
 	<div class="container mt-2 mt-md-4">
 		<div class="row">
 			<div class="col-12">
-				<img class="banner-bot" src="hpbook/images/banner-bot.png" alt="">
+			<img class="banner-bot" src="hpbook/images/banner-bot.png" alt="banner-bot.png">
 			</div>
 		</div>
 	</div>

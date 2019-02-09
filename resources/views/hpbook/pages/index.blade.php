@@ -9,7 +9,7 @@ Nhà sách HPBOOK
 			<div class="row">
 				<div class="col-3 d-md-block d-none">
 						<a href="">
-							<img class="imgBannerTop"  src="hpbook/images/46724557_2017163231695913_8130269221838913536_n.jpg" alt="">
+							<img class="imgBannerTop"  src="hpbook/images/46724557_2017163231695913_8130269221838913536_n.jpg" alt="46724557_2017163231695913_8130269221838913536_n.jpg">
 						</a>
 				</div>
 				<div class="col-12 col-md-9">
@@ -145,7 +145,7 @@ Nhà sách HPBOOK
 											<div class="col-4 mt-md-3 mt-lg-5">
 												<div class="thumb-wrapper">
 													<div class="img-box">
-														<a href="{!!url('/chi-tiet',$newProduct[$i]->alias)!!}"><img src="admin_public/upload/products/{!!$newProduct[$i]->image!!}" class="img-responsive img-fluid" alt=""></a>
+														<a href="{!!url('/chi-tiet',$newProduct[$i]->alias)!!}"><img src="admin_public/upload/products/{!!$newProduct[$i]->image!!}" class="img-responsive img-fluid" alt="{{$newProduct[$i]->image}}"></a>
 													</div>
 													<div class="thumb-content">
 														<a href="{!!url('/chi-tiet',$newProduct[$i]->alias)!!}" data-toggle="tooltip" data-placement="right" title="{!!$newProduct[$i]->name!!}"><h4 class="text-capitalize">{!!$newProduct[$i]->name!!}</h4></a>
@@ -174,7 +174,7 @@ Nhà sách HPBOOK
 											<div class="col-4 mt-md-3 mt-lg-5">
 												<div class="thumb-wrapper">
 													<div class="img-box">
-														<a href="{!!url('/chi-tiet',$newProduct[$i]->alias)!!}"><img src="admin_public/upload/products/{!!$newProduct[$i]->image!!}" class="img-responsive img-fluid" alt=""></a>
+														<a href="{!!url('/chi-tiet',$newProduct[$i]->alias)!!}"><img src="admin_public/upload/products/{!!$newProduct[$i]->image!!}" class="img-responsive img-fluid" alt="{{$newProduct[$i]->image}}"></a>
 													</div>
 													<div class="thumb-content">
 														<a href="{!!url('/chi-tiet',$newProduct[$i]->alias)!!}" data-toggle="tooltip" data-placement="right" title="{!!$newProduct[$i]->name!!}"><h4 class="text-capitalize">{!!$newProduct[$i]->name!!}</h4></a>
@@ -203,7 +203,7 @@ Nhà sách HPBOOK
 											<div class="col-4 mt-md-3 mt-lg-5">
 												<div class="thumb-wrapper">
 													<div class="img-box">
-														<a href="{!!url('/chi-tiet',$newProduct[$i]->alias)!!}"><img src="admin_public/upload/products/{!!$newProduct[$i]->image!!}" class="img-responsive img-fluid" alt=""></a>
+														<a href="{!!url('/chi-tiet',$newProduct[$i]->alias)!!}"><img src="admin_public/upload/products/{!!$newProduct[$i]->image!!}" class="img-responsive img-fluid" alt="{{$newProduct[$i]->image}}"></a>
 													</div>
 													<div class="thumb-content">
 														<a href="{!!url('/chi-tiet',$newProduct[$i]->alias)!!}" data-toggle="tooltip" data-placement="right" title="{!!$newProduct[$i]->name!!}"><h4 class="text-capitalize">{!!$newProduct[$i]->name!!}</h4></a>
@@ -252,7 +252,7 @@ Nhà sách HPBOOK
 											<div class="col-4 mt-md-3 mt-lg-5">
 												<div class="thumb-wrapper">
 													<div class="img-box">
-														<a href="{!!url('/chi-tiet',$discountProduct[$i]->alias)!!}"><img src="admin_public/upload/products/{!!$discountProduct[$i]->image!!}" class="img-responsive img-fluid" alt=""></a>
+														<a href="{!!url('/chi-tiet',$discountProduct[$i]->alias)!!}"><img src="admin_public/upload/products/{!!$discountProduct[$i]->image!!}" class="img-responsive img-fluid" alt="{{$discountProduct[$i]->image}}"></a>
 													</div>
 													<div class="thumb-content">
 														<a href="{!!url('/chi-tiet',$discountProduct[$i]->alias)!!}" data-toggle="tooltip" data-placement="right" title="{!!$discountProduct[$i]->name!!}"><h4 class="text-capitalize">{!!$discountProduct[$i]->name!!}</h4></a>
@@ -281,7 +281,7 @@ Nhà sách HPBOOK
 											<div class="col-4 mt-md-3 mt-lg-5">
 												<div class="thumb-wrapper">
 													<div class="img-box">
-														<a href="{!!url('/chi-tiet',$discountProduct[$i]->alias)!!}"><img src="admin_public/upload/products/{!!$discountProduct[$i]->image!!}" class="img-responsive img-fluid" alt=""></a>
+														<a href="{!!url('/chi-tiet',$discountProduct[$i]->alias)!!}"><img src="admin_public/upload/products/{!!$discountProduct[$i]->image!!}" class="img-responsive img-fluid" alt="{{$discountProduct[$i]->image}}"></a>
 													</div>
 													<div class="thumb-content">
 														<a href="{!!url('/chi-tiet',$discountProduct[$i]->alias)!!}" data-toggle="tooltip" data-placement="right" title="{!!$discountProduct[$i]->name!!}"><h4 class="text-capitalize">{!!$discountProduct[$i]->name!!}</h4></a>
@@ -310,7 +310,7 @@ Nhà sách HPBOOK
 											<div class="col-4 mt-md-3 mt-lg-5">
 												<div class="thumb-wrapper">
 													<div class="img-box">
-														<a href="{!!url('/chi-tiet',$discountProduct[$i]->alias)!!}"><img src="admin_public/upload/products/{!!$discountProduct[$i]->image!!}" class="img-responsive img-fluid" alt=""></a>
+														<a href="{!!url('/chi-tiet',$discountProduct[$i]->alias)!!}"><img src="admin_public/upload/products/{!!$discountProduct[$i]->image!!}" class="img-responsive img-fluid" alt="{{$discountProduct[$i]->image}}"></a>
 													</div>
 													<div class="thumb-content">
 														<a href="{!!url('/chi-tiet',$discountProduct[$i]->alias)!!}" data-toggle="tooltip" data-placement="right" title="{!!$discountProduct[$i]->name!!}"><h4 class="text-capitalize">{!!$discountProduct[$i]->name!!}</h4></a>

@@ -70,7 +70,7 @@ Sửa Sản Phẩm - HPBOOK ADMIN
                                         </div>
                                         <div class="form-group col-lg-6">
                                             <label for="image_current">Hình ảnh sản phẩm hiện tại<span class="text-danger">*</span></label>
-                                            <img style="width:80px; height:110px;" class="image_current" src="admin_public/upload/products/{!!$product->image!!}" alt="">
+                                        <img style="width:80px; height:110px;" class="image_current" src="admin_public/upload/products/{!!$product->image!!}" alt="{{$product->image}}">
                                             <input id="image_current" name="image_current" type="hidden" 
                                                    class="form-control" value="{!!$product->image!!}">
                                          </div>

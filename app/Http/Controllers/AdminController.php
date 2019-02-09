@@ -18,86 +18,92 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $now = Carbon::now();
-        $nowString = $now->toDateTimeString();
-        $month = $now->month;
-        $year = $now->year;
-        $previous = $now->subMonth();
-        $report_now = Report::where([
-            ['month', '=', $month],
-            ['year', '=', $year]
-        ])->first();
+        try{
+            DB::beginTransaction();
+            $now = Carbon::now();
+            $nowString = $now->toDateTimeString();
+            $month = $now->month;
+            $year = $now->year;
+            $previous = $now->subMonth();
+            $report_now = Report::where([
+                ['month', '=', $month],
+                ['year', '=', $year]
+            ])->first();
+            $previous_report = Report::where([
+                ['month', '=', $previous->month],
+                ['year', '=', $previous->year]
+            ])->first();
 
-        $previous_report = Report::where([
-            ['month', '=', $previous->month],
-            ['year', '=', $previous->year]
-        ])->first();
+            $report = Report::where('year', $year)->get();
 
-        $report = Report::where('year', $year)->get();
+            $transaction = Transaction::where('status', 4)->whereMonth('created_at', '=', $month)->whereYear('created_at', '=', $year)
+                ->with('products')->get();
+            //dd($report_now);
+            if (is_null($report_now)) {
+                $new_report = new Report();
+                $new_report->month = $month;
+                $new_report->year = $year;
+                if (!count($transaction) == 0) {
+                    $new_report->countTransaction = $transaction->count('id');
+                    $new_report->sumTransaction = $transaction->sum('amount_total');
+                    $new_report->avgTransaction = $transaction->avg('amount_total');
+                    $sumQuantity = 0;
+                    foreach ($transaction as $value) {
 
-        $transaction = Transaction::where('status', 4)->whereMonth('created_at', '=', $month)->whereYear('created_at', '=', $year)
-            ->with('products')->get();
-        //dd($report_now);
-        if ($report_now->count() == 0) {
-            $new_report = new Report();
-            $new_report->month = $month;
-            $new_report->year = $year;
-            if (!count($transaction) == 0) {
-                $new_report->countTransaction = $transaction->count('id');
-                $new_report->sumTransaction = $transaction->sum('amount_total');
-                $new_report->avgTransaction = $transaction->avg('amount_total');
-                $sumQuantity = 0;
-                foreach ($transaction as $value) {
+                        $pro_tran = DB::table('product_transaction')->where('transaction_id', $value->id)->get();
+                        foreach ($pro_tran as $value2) {
+                            $sumQuantity = $sumQuantity + $value2->quantity;
 
-                    $pro_tran = DB::table('product_transaction')->where('transaction_id', $value->id)->get();
-                    foreach ($pro_tran as $value2) {
-                        $sumQuantity = $sumQuantity + $value2->quantity;
-
+                        }
                     }
-                }
-                $new_report->sumQuantity = $sumQuantity;
-                $new_report->save();
-                foreach ($transaction as $value) {
-                    $value->report_id = $new_report->id;
-                    $value->save();
+                    $new_report->sumQuantity = $sumQuantity;
+                    $new_report->save();
+                    foreach ($transaction as $value) {
+                        $value->report_id = $new_report->id;
+                        $value->save();
+                    }
+                } else {
+                    $new_report->countTransaction = 0;
+                    $new_report->sumTransaction = 0;
+                    $new_report->avgTransaction = 0;
+                    $new_report->sumQuantity = 0;
+                    $new_report->save();
                 }
             } else {
-                $new_report->countTransaction = 0;
-                $new_report->sumTransaction = 0;
-                $new_report->avgTransaction = 0;
-                $new_report->sumQuantity = 0;
-                $new_report->save();
-            }
-        } else {
-            $report_now->month = $month;
-            $report_now->year = $year;
-            if (!count($transaction) == 0) {
-                $report_now->countTransaction = $transaction->count('id');
-                $report_now->sumTransaction = $transaction->sum('amount_total');
-                $report_now->avgTransaction = $transaction->avg('amount_total');
-                $sumQuantity = 0;
-                foreach ($transaction as $value) {
-                    $pro_tran = DB::table('product_transaction')->where('transaction_id', $value->id)->get();
-                    foreach ($pro_tran as $value2) {
-                        $sumQuantity = $sumQuantity + $value2->quantity;
+                $report_now->month = $month;
+                $report_now->year = $year;
+                if (!count($transaction) == 0) {
+                    $report_now->countTransaction = $transaction->count('id');
+                    $report_now->sumTransaction = $transaction->sum('amount_total');
+                    $report_now->avgTransaction = $transaction->avg('amount_total');
+                    $sumQuantity = 0;
+                    foreach ($transaction as $value) {
+                        $pro_tran = DB::table('product_transaction')->where('transaction_id', $value->id)->get();
+                        foreach ($pro_tran as $value2) {
+                            $sumQuantity = $sumQuantity + $value2->quantity;
+                        }
                     }
+                    $report_now->sumQuantity = $sumQuantity;
+                    $report_now->save();
+                    foreach ($transaction as $value) {
+                        $value->report_id = $report_now->id;
+                        $value->save();
+                    }
+                } else {
+                    $report_now->countTransaction = 0;
+                    $report_now->sumTransaction = 0;
+                    $report_now->avgTransaction = 0;
+                    $report_now->sumQuantity = 0;
+                    $report_now->save();
                 }
-                $report_now->sumQuantity = $sumQuantity;
-                $report_now->save();
-                foreach ($transaction as $value) {
-                    $value->report_id = $report_now->id;
-                    $value->save();
-                }
-            } else {
-                $report_now->countTransaction = 0;
-                $report_now->sumTransaction = 0;
-                $report_now->avgTransaction = 0;
-                $report_now->sumQuantity = 0;
-                $report_now->save();
             }
+            DB::commit();
+            //print_r($report_now);die;
+            return view('admin.pages.index', compact('report_now', 'report', 'previous_report', 'nowString', 'transaction'));
         }
-        //print_r($report_now);die;
-        return view('admin.pages.index', compact('report_now', 'report', 'previous_report', 'nowString', 'transaction'));
+        catch (\Exception $ex){
+            DB::rollBack();
+        }
     }
 
     public function login(Request $request)
