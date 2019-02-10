@@ -69,6 +69,7 @@ Route::get('createcaptcha', 'CaptchaController@create');
 Route::get('refreshcaptcha', 'CaptchaController@refreshCaptcha');
 //Admin
 Route::match(['get', 'post'], '/admin', ['as' => 'login', 'uses' => 'AdminController@login']);
+Route::group(['middleware' => 'checkAdmin'], function () {
     Route::get('/admin/index', ['uses' => 'AdminController@index']);
     Route::get('/admin/settings', ['uses' => 'AdminController@settings']);
     Route::get('/admin/check-pwd', ['uses' => 'AdminController@checkPass']);
@@ -181,6 +182,9 @@ Route::match(['get', 'post'], '/admin', ['as' => 'login', 'uses' => 'AdminContro
         Route::match(['get', 'post'], '/admin/edit-permission/{id}', ['uses' => 'PermissionController@editPermission']);
         Route::get('/admin/delete-permission/{id}', ['uses' => 'PermissionController@deletePermission']);
     });
+});
 Route::get('/admin/logout', ['uses' => 'AdminController@logout']);
+
+
 
 
