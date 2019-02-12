@@ -56,8 +56,6 @@ Danh Sách Banner - HPBOOK ADMIN
                                             @elseif($item['position']==2)
                                                 <td>Top</td>
                                             @elseif($item['position']==3)
-                                                <td>Mid</td>
-                                            @else
                                                 <td>Bot</td>
                                             @endif
                                             

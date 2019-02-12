@@ -1,4 +1,4 @@
-<div class="container mt-2 mt-md-4">
+<div class="container mt-1">
 		<div class="bg-dark wrapper-content-footer">
 			<div class="row">
 					<div class="col-sm-3 d-md-block d-none">

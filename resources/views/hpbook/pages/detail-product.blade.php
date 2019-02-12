@@ -209,7 +209,7 @@
 									</table>
 									<div class="form-group mt-4 contentYourComment">
 									    <label for="content">Nội dung bình luận</label>
-									    <textarea required="required" class="form-control" name="content" id="content" rows="3"></textarea>
+									    <textarea required="required" class="form-control" name="content1" id="content1" rows="3"></textarea>
 									    {{-- captcha --}}
 								        <div class="form-group mt-3">
 								            <div class="captcha">

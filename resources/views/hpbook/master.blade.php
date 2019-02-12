@@ -38,9 +38,13 @@
 	<!-- banner bot -->
 	<div class="container mt-2 mt-md-4">
 		<div class="row">
-			<div class="col-12">
-			<img class="banner-bot" src="hpbook/images/banner-bot.png" alt="banner-bot.png">
-			</div>
+			{{--<div class="col-12">--}}
+				{{--@php--}}
+					{{--$banner = DB::table('banners')->get();--}}
+				{{--//dd($banner);--}}
+				{{--@endphp--}}
+			{{--<img class="banner-bot" src="admin_public/upload/banners/{!!$banner[1]->image!!}" alt="{!!$banner[1]->image!!}">--}}
+			{{--</div>--}}
 		</div>
 	</div>
 	<!-- footer -->

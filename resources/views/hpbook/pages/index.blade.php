@@ -41,15 +41,7 @@ Nhà sách HPBOOK
 	<!-- end slider -->
 	<!-- content -->
 	<div class="container ">
-		<div class="banner-top mt-4">
-			<div class="row">
-				<div class="col-12">
-					<a href="{!!url($banner[0]['link'])!!}">
-						<img class="imgBannerMid" src="admin_public/upload/banners/{!!$banner[0]['image']!!}" alt="{!!$banner[0]['image']!!}">
-					</a>
-				</div>
-			</div>
-		</div>
+
 		<!-- 1 block -->
 		@foreach($category as $key => $item)
 		@if($key==2)
@@ -57,7 +49,7 @@ Nhà sách HPBOOK
 			<div class="row">
 				<div class="col-12">
 					<a href="{!!url($banner[1]['link'])!!}">
-						<img class="imgBannerMid" src="admin_public/upload/banners/{!!$banner[1]['image']!!}" alt="{!!$banner[1]['image']!!}">
+						<img class="imgBannerMid" src="admin_public/upload/banners/{!!$banner[0]['image']!!}" alt="{!!$banner[0]['image']!!}">
 					</a>
 				</div>
 			</div>
@@ -378,6 +370,15 @@ Nhà sách HPBOOK
 			</div>
 		</div>
 		@endforeach
+		<div class="banner-top mt-4 mb-0">
+			<div class="row">
+			<div class="col-12">
+			<a href="{!!url($banner[1]['link'])!!}">
+			<img class="imgBannerMid" src="admin_public/upload/banners/{!!$banner[1]['image']!!}" alt="{!!$banner[1]['image']!!}">
+			</a>
+			</div>
+			</div>
+		</div>
 	</div>
 	<!-- end content-->
 	

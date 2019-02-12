@@ -99,7 +99,7 @@ class HomeController extends Controller
                 return redirect()->back()->withErrors($v->errors());
             }
             $newComment = new Comment();
-            $newComment->content = $request->content;
+            $newComment->content = $request->content1;
             $newComment->score = $request->voteStar;
             $newComment->product_id = $product->id;
             $newComment->user_id = Auth::user()->id;
