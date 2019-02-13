@@ -27,12 +27,12 @@ class ReportController extends Controller
         
     }
 
-    public function reportMonth($id){
+    public function reportMonth($year,$month){
         $now = Carbon::now();
         $nowString = $now->toDateTimeString();
-        $report = Report::find($id);
-        if(count($report)!=0){
-            $transaction = Transaction::where('report_id',$id)->get()->toArray();
+        $report = Report::where([['year',$year],['month',$month]])->first();
+        if(!empty($report)){
+            $transaction = Transaction::where('report_id',$report->id)->get()->toArray();
             $sumQuantity = array();
             foreach($transaction as $value){
                 $pro_tran = DB::table('product_transaction')->where('transaction_id',$value['id'])->groupBy('transaction_id')->get(array(
@@ -44,7 +44,7 @@ class ReportController extends Controller
             for($i=0;$i<count($transaction);$i++){
                 $transaction[$i]['sumQuantity'] = $sumQuantity[$i];
             }
-            $data = Transaction::where('report_id',$id)->groupBy('date')->get(array(
+            $data = Transaction::where('report_id',$report->id)->groupBy('date')->get(array(
                 DB::raw('Date(created_at) as date'),
                 DB::raw('COUNT(*) as "countTransaction"'),
                 DB::raw('SUM(amount_total) as "sumTransaction"'),

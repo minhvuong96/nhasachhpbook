@@ -62,7 +62,7 @@ Doanh Thu Năm {!!$year!!} - HPBOOK
                                             @foreach($report as $value)
 
                                             <tr class="text-center">
-                                                <td><a href="{!!url('/admin/report-month',$value->id)!!}">Tháng {!!$value->month!!}</a></td>
+                                                <td><a href="{!!url('/admin/report',[$value->year,$value->month])!!}">Tháng {!!$value->month!!}</a></td>
 
                                                 <td>
                                                     {!!$value->countTransaction!!} đơn hàng

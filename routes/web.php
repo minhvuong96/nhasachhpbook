@@ -125,7 +125,7 @@ Route::group(['middleware' => 'checkAdmin'], function () {
         //Thống kê theo năm
         Route::get('/admin/report-year/{year}', ['uses' => 'ReportController@reportYear']);
         //Thống kê theo tháng
-        Route::get('/admin/report-month/{id}', ['uses' => 'ReportController@reportMonth']);
+        Route::get('/admin/report/{year}/{month}', ['uses' => 'ReportController@reportMonth']);
         //Giảm giá Coupon
         Route::match(['get', 'post'], '/admin/add-coupon', ['uses' => 'CouponController@addCoupon']);
         Route::get('/admin/view-coupon', ['uses' => 'CouponController@viewCoupon']);
